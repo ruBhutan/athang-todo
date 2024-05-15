@@ -2,6 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MediumPlantCard extends StatelessWidget {
+  String title;
+  String url;
+  String description;
+
+  MediumPlantCard({
+    required this.title,
+    this.description = "",
+    this.url = "https://cdn.pixabay.com/photo/2023/01/13/14/58/snake-7716269_1280.jpg",
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +24,7 @@ class MediumPlantCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             child: Image.network(
-              "https://cdn.pixabay.com/photo/2023/01/13/14/58/snake-7716269_1280.jpg",
+              url,
               fit:BoxFit.cover,
               height:100,
               width: 100,
@@ -24,14 +33,14 @@ class MediumPlantCard extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 8),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Name of the description.', style: TextStyle(
+                  Text(title, style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),),
-                  Text('Description'),
+                  Text(description),
                 ],
               ),
             ),
