@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo/widgets/plant_landing/LatestProducts.dart';
+import 'package:todo/widgets/plant_landing/RecentlyReviewed.dart';
 import 'package:todo/widgets/plant_landing/RecommendedPlants.dart';
 import 'package:todo/widgets/plant_landing/SearchBar.plant.dart';
 
@@ -14,8 +16,10 @@ class PlantLanding extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-              SearchBarPlant(),
-              RecommendedPlants()
+            SearchBarPlant(),
+            RecommendedPlants(),
+            RecentlyReviewed(),
+            LatestProducts()
           ],
         ),
       ),
