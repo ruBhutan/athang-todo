@@ -26,7 +26,7 @@ class SmallProductCard extends StatelessWidget {
                   'Duck for sale',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                Text('Desription', style: TextStyle(fontSize: 16),),
+                Text('Description', style: TextStyle(fontSize: 16),),
               ],
             ),
           )
