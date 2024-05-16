@@ -1,8 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/models/Places.model.dart';
 import 'package:todo/screens/travel/Details.travel.dart';
 
 class PopularCardTravel extends StatelessWidget {
+  PlaceCardModel place;
+
+  PopularCardTravel({required this.place});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,7 +25,7 @@ class PopularCardTravel extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
               image: NetworkImage(
-                "https://cdn.pixabay.com/photo/2023/05/29/00/24/blue-tit-8024809_640.jpg",
+                place.img,
               ),
               fit: BoxFit.cover),
           borderRadius: BorderRadius.circular(16),
@@ -40,7 +45,7 @@ class PopularCardTravel extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'Title of the place',
+                        place.title,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
@@ -48,12 +53,13 @@ class PopularCardTravel extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.room, color: Colors.white,),
+                          Icon(
+                            Icons.room,
+                            color: Colors.white,
+                          ),
                           Text(
-                            'Location Data, Country',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16),
+                            place.description,
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -64,9 +70,10 @@ class PopularCardTravel extends StatelessWidget {
               Row(
                 children: [
                   Icon(Icons.star, color: Colors.yellow),
-                  Text('4.7', style: TextStyle(
-                    color:Colors.white
-                  ),)
+                  Text(
+                    '4.7',
+                    style: TextStyle(color: Colors.white),
+                  )
                 ],
               )
             ],
