@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todo/widgets/travel/Popular.travel.dart';
 
+import '../../widgets/travel/RecommendedTravel.dart';
+
 class HomeTravel extends StatelessWidget {
 
   @override
@@ -12,7 +14,8 @@ class HomeTravel extends StatelessWidget {
       body:SingleChildScrollView(
         child: Column(
           children:[
-            PopularTravel()
+            PopularTravel(),
+            RecommendedTravel()
           ],
         ),
       )

@@ -5,17 +5,24 @@ class PopularTravel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Popular Places'),
-              Text('View more'),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Popular Places',
+                  style: TextStyle(fontSize: 24),
+                ),
+                Text('View more'),
+              ],
+            ),
           ),
           Container(
+            margin: EdgeInsets.only(top:8),
+            padding: EdgeInsets.only(left:16),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
