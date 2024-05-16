@@ -72,9 +72,11 @@ class IntroTravel extends StatelessWidget {
                     height: 48,
                     width: double.infinity,
                     child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.black),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        backgroundColor: Colors.black,
                       ),
                       onPressed: () {},
                       child: Row(
