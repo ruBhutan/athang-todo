@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo/screens/Home.dart';
 import 'package:todo/screens/PlantLanding.dart';
+import 'package:todo/screens/travel/Home.travel.dart';
 import 'package:todo/screens/travel/Intro.travel.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: Home() ,
-      home: IntroTravel(),
+      home: HomeTravel(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/screens/travel/Home.travel.dart';
 
 class IntroTravel extends StatelessWidget {
   @override
@@ -78,7 +79,12 @@ class IntroTravel extends StatelessWidget {
                         ),
                         backgroundColor: Colors.black,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeTravel()),
+                        );
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -106,7 +112,9 @@ class IntroTravel extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(16),
               child: OutlinedButton(
-                onPressed: (){},
+                onPressed: (){
+
+                },
                 child: Text('Skip', style: TextStyle(color: Colors.white),),
               ),
             ),
