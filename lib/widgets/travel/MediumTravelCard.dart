@@ -22,6 +22,12 @@ class MediumTravelCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
+          // since the value received is not based on PlaceCardModel,
+          // the format that detail
+          // travel receives the variable in,
+          // and is received in fragments, we must convert the individual data
+          // into DetailsTravel receiving format i.e, based on PlaceCardModel before
+          // passing into DetailsTravel
           MaterialPageRoute(builder: (context) => DetailsTravel(place: PlaceCardModel(
             title: title,
             img: url,

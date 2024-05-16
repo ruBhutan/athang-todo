@@ -3,6 +3,8 @@ class PlaceCardModel {
   String title;
   String description;
 
+  // definition of the place card model constructor. It initializes the
+  // class when the object is declared
   PlaceCardModel(
       {required this.img, required this.description, required this.title});
 }

@@ -14,6 +14,10 @@ class PopularCardTravel extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
+          // the place variable is received from the popular places component is being
+          // passed down to details travel while navigating in the line below
+          // since the value received is based on PlaceCardModel, the format that detail
+          // travel receives the variable in, we can directly pass it into the route
           MaterialPageRoute(builder: (context) => DetailsTravel(place: place,)),
         );
       },
