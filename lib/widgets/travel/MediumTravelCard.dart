@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/models/Places.model.dart';
 
 import '../../screens/travel/Details.travel.dart';
 
@@ -21,7 +22,11 @@ class MediumTravelCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DetailsTravel()),
+          MaterialPageRoute(builder: (context) => DetailsTravel(place: PlaceCardModel(
+            title: title,
+            img: url,
+            description: description,
+          ))),
         );
       },
       child: Container(

@@ -15,6 +15,7 @@ class PopularTravel extends StatelessWidget {
         img: "https://cdn.pixabay.com/photo/2022/11/07/21/31/rose-7577265_640.jpg",
         description: "description 1", title: "title 3"),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -14,7 +14,7 @@ class PopularCardTravel extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DetailsTravel()),
+          MaterialPageRoute(builder: (context) => DetailsTravel(place: place,)),
         );
       },
       child: Container(
